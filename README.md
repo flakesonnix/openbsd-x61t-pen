@@ -4,6 +4,10 @@ An experimental serial ISDV4-to-XTest pointer bridge for the ThinkPad X61
 Tablet on OpenBSD. Small C program, base-system X11 libraries, no Linux input
 API and no desktop framework.
 
+**LLM-assisted development:** This OpenBSD bridge and its build files, tests,
+and documentation were developed with assistance from a large language model
+(LLM). Existing upstream code and attribution are identified in [NOTICE](NOTICE).
+
 **This is a mouse-pointer bridge, not a native Wacom/XInput tablet driver.**
 It reads pressure but does not deliver pressure, tilt, or a separate tablet
 device to drawing applications. Do not expect pressure-sensitive strokes.
