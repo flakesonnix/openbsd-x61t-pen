@@ -1,0 +1,22 @@
+openbsd-x61t-pen is distributed under GPL-2.0-or-later.
+The complete GNU General Public License version 2 is provided in LICENSE;
+the source header grants the option to use that version or any later version.
+
+The existing x61-pen.c source retains its original license and attribution:
+
+    ISDV4 coordinate/query layout derived from linuxwacom include/isdv4.h,
+    Copyright 2010 Red Hat, Inc., licensed GPL-2.0-or-later.
+
+Upstream reference:
+https://github.com/linuxwacom/xf86-input-wacom/blob/master/include/isdv4.h
+
+No exact upstream revision was recorded in the original bridge source.
+This repository does not claim ISC/MIT relicensing, clean-room development,
+or endorsement by OpenBSD, Lenovo, Wacom, or Red Hat.
+
+The build files, tests, examples, and documentation added for this repository
+are also made available under GPL-2.0-or-later.
+Copyright (c) 2026 Lucy.
+
+X11 libraries and OpenBSD system tools are supplied separately under their
+respective licenses; they are not bundled in this repository.

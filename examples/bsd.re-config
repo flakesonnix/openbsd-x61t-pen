@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# OpenBSD 7.9 amd64 X61t example: review both com0 entries before use.
+# Prompt order: ISA com0 first, ACPI com0 second. See INSTALL.md.
+change com0
+y
+0x200
+0
+-1
+0
+5
+-1
+-1
+0
+n

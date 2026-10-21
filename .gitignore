@@ -1,0 +1,8 @@
+/x61-pen
+/tests/integration
+*.o
+*.core
+*.log
+*.raw
+*.jsonl
+/core

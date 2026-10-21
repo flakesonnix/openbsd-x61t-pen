@@ -1,0 +1,34 @@
+name: OpenBSD
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build and test inside OpenBSD 7.9
+        uses: vmactions/openbsd-vm@f1ca8bc8ecc5b6ef7218e5b914836e067e1546d3 # v1.4.9
+        with:
+          release: "7.9"
+          arch: x86_64
+          copyback: false
+          run: |
+            export PATH=/usr/X11R6/bin:/usr/bin:/bin:/usr/sbin:/sbin
+            test "$(uname -s)" = OpenBSD
+            test "$(uname -r)" = 7.9
+            make
+            make check

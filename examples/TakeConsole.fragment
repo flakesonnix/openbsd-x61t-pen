@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Insert into the existing xenodm TakeConsole before sessreg, as root.
+if [ -c /dev/cua00 ] &&
+    grep -q '^com0 at isa0 port 0x200/8 irq 5:' /var/run/dmesg.boot; then
+    chown root:dialer /dev/cua00
+    chmod 660 /dev/cua00
+fi
